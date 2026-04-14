@@ -49,6 +49,9 @@ const clienteRepository = {
             await conn.rollback();
             throw error;
         } 
+          finally{
+            conn.release();
+        }
     },
 
     selecionar: async () => {
@@ -117,6 +120,9 @@ const clienteRepository = {
             await conn.rollback();
             throw error;
         } 
+        finally{
+            conn.release();
+        }
     },
 
     deletar: async (id) => {
@@ -138,6 +144,9 @@ const clienteRepository = {
             await conn.rollback();
             throw error;
         } 
+          finally{
+            conn.release();
+        }
     }
 };
 
