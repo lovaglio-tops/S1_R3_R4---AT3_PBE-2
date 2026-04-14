@@ -4,7 +4,6 @@ const clienteRepository = {
 
     criar: async (cliente, telefones, endereco) => {
         const conn = await connection.getConnection();
-        console.log(endereco)
         try {
             await conn.beginTransaction();
 
